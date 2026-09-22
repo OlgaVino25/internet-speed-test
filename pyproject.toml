@@ -1,0 +1,24 @@
+[project]
+name = "internet-speed-test"
+version = "0.1.0"
+description = "CLI internet speed tester: N sequential downloads, avg time and MB/s."
+readme = "README.md"
+authors = [
+    { name = "OlgaVino25", email = "olgavinokyrova25@yandex.ru" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+speedtest = "internet_speed_test.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.0,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

@@ -1,0 +1,9 @@
+services:
+  speedtest:
+    build:
+      context: .
+    image: internet-speed-test:latest
+    command:
+      - "https://speed.cloudflare.com/__down?bytes=10000000"
+      - "-n"
+      - "5"
